@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome to Love World</title>
+  <link rel="stylesheet" href="New.css">
+</head>
+<body>
+  <audio id="romantic-music" loop>
+    <source src="https://www.bensound.com/bensound-music/bensound-love.mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- Home Page -->
+  <div class="container" id="home">
+    <h1>Welcome to Love World</h1>
+    <p>Will you be my valentine, my sunshine?</p>
+    <button onclick="handleChoice('no')">No</button>
+    <button onclick="handleChoice('yes')">Yes</button>
+  </div>
+
+  <!-- Wrong Choice Page -->
+  <div class="container" id="wrong" style="display: none;">
+    <h2>Oops! You clicked the wrong option by mistake. Try again!</h2>
+    <button onclick="handleChoice('no')">No</button>
+    <button onclick="handleChoice('yes')">Yes</button>
+  </div>
+
+  <!-- Invalid Input Page -->
+  <div class="container" id="invalid" style="display: none;">
+    <h2>Invalid input. Let me help you again!</h2>
+    <button onclick="handleChoice('yes')">Yes</button>
+  </div>
+
+  <!-- Final Page -->
+  <div class="container" id="final" style="display: none;">
+    <h2 class="final-message">Thank you for saying yes! ❤️ You are my forever valentine!</h2>
+    <p class="surprise-text">P.S. Look at all these hearts—they’re a little piece of my love for you!</p>
+    <button onclick="showPoemPage()">Click here to view a surprise!</button>
+    <div id="hearts-container"></div>
+  </div>
+
+  <!-- Poem Page -->
+  <div class="container" id="poem" style="display: none;">
+    <h2 class="poem-title">A Special Poem Just for You</h2>
+    <p class="poem">
+      Roses are red, violets are blue,<br>
+      My world is brighter, all because of you.<br>
+      You light up my heart, you make my soul sing,<br>
+      With you by my side, I can do anything.<br><br>
+      Here’s to the moments, the laughter, the cheer,<br>
+      To our endless love, my Valentine dear.<br>
+      Always and forever, you’ll stay in my heart,<br>
+      From this very moment, we’ll never be apart.<br>
+    </p>
+    <p class="ending-note">With love, always and forever...</p>
+  </div>
+
+  <script src="New.js"></script>
+</body>
+</html>
